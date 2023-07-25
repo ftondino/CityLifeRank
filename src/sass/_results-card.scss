@@ -1,0 +1,93 @@
+.section-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.244);
+  backdrop-filter: blur(7px) saturate(116%);
+  -webkit-backdrop-filter: blur(7px) saturate(116%);
+  @include respond(phone) {
+  }
+}
+
+.card-container {
+  height: 80%;
+  width: 75%;
+  position: relative;
+  padding-bottom: 7rem;
+  border-radius: 0.5rem;
+  background-color: rgb(222, 222, 222);
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: grey;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgb(10, 10, 10);
+  }
+  &__close {
+    position: absolute;
+    top: 0rem;
+    right: 1.5rem;
+
+    color: #141530;
+    font-size: 5rem;
+    text-decoration: none;
+    @include respond(phone) {
+      max-height: 100rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 6rem;
+  position: relative;
+  @include respond(phone) {
+    height: 20rem;
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.8, 0.3, 0.3);
+    transform: scale3d(0.8, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.8, 0.3, 0.3);
+    transform: scale3d(0.8, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}

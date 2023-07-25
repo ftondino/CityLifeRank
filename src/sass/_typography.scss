@@ -1,0 +1,55 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: white;
+}
+
+.heading {
+  font-size: 6rem;
+  letter-spacing: 0.3rem;
+  text-shadow: 0 1rem 2rem rgba(black, 0.1);
+  @include respond(tab-port) {
+    text-align: center;
+  }
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+}
+.subtitle {
+  font-size: 2rem;
+  color: rgb(199, 199, 199);
+  letter-spacing: 0.1rem;
+  @include respond(phone) {
+    padding: 0 3rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+.card-container {
+  &__heading {
+    color: white;
+    text-transform: uppercase;
+    font-size: 5.5rem;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-shadow: 3px 1rem 1rem black;
+    @include respond(tab-port) {
+      top: 30%;
+    }
+    @include respond(phone) {
+      text-align: center;
+      top: 20%;
+    }
+  }
+
+  &__text {
+    padding: 7rem;
+    color: rgb(48, 48, 48);
+  }
+}
