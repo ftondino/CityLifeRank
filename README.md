@@ -19,7 +19,7 @@ https://cityliferank.netlify.app/
 - Chart.js
 - Lodash
   
-## This project has been created using **webpack-cli**, you can now run
+## Questo progetto è stato creato utilizzando **webpack-cli**, puoi installarlo così
 
 ```
 npm run build
